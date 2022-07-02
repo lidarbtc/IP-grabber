@@ -34,7 +34,7 @@ def db_connector(sql_command):
 
 @app.route('/', methods=['GET', 'POST']) 
 def index():
-    ip_address = flask.request.remote_addr
+    ip_address = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
     useragent = request.headers.get('User-Agent')
     db_connector(f"INSERT IGNORE INTO info(userip, useragent) VALUES('{ip_address}', '{useragent}');")
     return render_template('main.html')
