@@ -4,8 +4,6 @@ import flask
 import pymysql
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = b'{Q>GOR(76X^ys!H.V#x:<@HQJRpg{P7)QMKCe]SUTJDe%/aPUN'
-app.config["PERMANENT_SESSION_LIFETIME"] = datetime.timedelta(minutes=60)
 
 HTML_PATH_MAIN = './main.html'
 
@@ -40,4 +38,4 @@ def index():
     return render_template('main.html')
 
 if __name__ == '__main__':
-    app.run(host="localhost", port="3000",debug=False, threaded=True)
+    app.run(host="localhost", port="5555", threaded=True)
