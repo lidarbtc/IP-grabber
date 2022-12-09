@@ -18,7 +18,7 @@ Grab IP and Useragent with flask
  pip3 install flask
  
  git clone https://github.com/lidarbtc/IP-grabber.git
- cd dongbaek-life
+ cd IP-grabber
 
  python3 app.py
  ```
